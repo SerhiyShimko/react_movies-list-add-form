@@ -12,10 +12,10 @@ export const NewMovie: React.FC<Props> = ({ onAdd, countForm }) => {
   // to reset touched status of all the `Field`s
 
   const [valueTitle, setValueTitle] = useState('');
-  const [valueDescription, setvalueDescription] = useState('');
-  const [valueImageURL, setvalueImageURL] = useState('');
-  const [valueImdbURL, setvalueImdbURL] = useState('');
-  const [valueImdbID, setvalueImdbID] = useState('');
+  const [valueDescription, setValueDescription] = useState('');
+  const [valueImageURL, setValueImageURL] = useState('');
+  const [valueImdbURL, setValueImdbURL] = useState('');
+  const [valueImdbID, setValueImdbID] = useState('');
 
   const theButtonDisabled = () => {
     if (
@@ -32,10 +32,10 @@ export const NewMovie: React.FC<Props> = ({ onAdd, countForm }) => {
 
   const onReset = () => {
     setValueTitle('');
-    setvalueDescription('');
-    setvalueImageURL('');
-    setvalueImdbID('');
-    setvalueImdbURL('');
+    setValueDescription('');
+    setValueImageURL('');
+    setValueImdbID('');
+    setValueImdbURL('');
   };
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -87,7 +87,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd, countForm }) => {
         label="Description"
         value={valueDescription}
         onChange={newValue => {
-          setvalueDescription(newValue);
+          setValueDescription(newValue);
         }}
       />
 
@@ -97,7 +97,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd, countForm }) => {
         value={valueImageURL}
         required
         onChange={newValue => {
-          setvalueImageURL(newValue);
+          setValueImageURL(newValue);
         }}
       />
 
@@ -107,7 +107,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd, countForm }) => {
         value={valueImdbURL}
         required
         onChange={newValue => {
-          setvalueImdbURL(newValue);
+          setValueImdbURL(newValue);
         }}
       />
 
@@ -117,7 +117,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd, countForm }) => {
         value={valueImdbID}
         required
         onChange={newValue => {
-          setvalueImdbID(newValue);
+          setValueImdbID(newValue);
         }}
       />
 
