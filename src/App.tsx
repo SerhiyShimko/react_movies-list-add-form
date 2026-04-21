@@ -5,7 +5,7 @@ import moviesFromServer from './api/movies.json';
 import { Movie } from './types/Movie';
 import { useState } from 'react';
 
-export function creatNewMovies(newMovie: Movie, movies: Movie[]) {
+export function createNewMovies(newMovie: Movie, movies: Movie[]) {
   const newMovies: Movie[] = [...movies, newMovie];
 
   return newMovies;
@@ -23,7 +23,7 @@ export const App = () => {
       <div className="sidebar">
         <NewMovie
           onAdd={(movie: Movie) => {
-            setNewMovies(creatNewMovies(movie, newMovies));
+            setNewMovies(prev => createNewMovies(movie, prev));
             setCount(prev => prev + 1);
           }}
           countForm={count}
